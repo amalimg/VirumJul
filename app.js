@@ -87,11 +87,29 @@ function jensFont(centerX, centerY){
         triangle(x-30,y-26,x+30,y-26,x+26,y-90);
         fill(255, 255, 255);
         ellipse(x+26,y-90,25*scale,25*scale);
+}
 
 
-
+function Sophabbr(centerX, centerY){ 
+    push()
+    var wid = 100
+    var hei = 100
+    fill(0, 98, 255);
+    ellipse(centerX,centerY,wid,hei);
+    fill(255, 255, 255);
+    ellipse(centerX,centerY,wid-(0.10*wid),hei-(0.10*hei));
+    fill(255, 0, 0);
+    ellipse(centerX,centerY,wid-(0.20*wid),hei-(0.20*wid));
+    fill(255, 255, 255);
+    ellipse(centerX,centerY,wid-(0.45*wid),hei-(0.45*hei));
+    fill(0, 98, 255);
+    ellipse(centerX,centerY,wid-(0.55*wid),hei-(0.55*wid));    
+    fill(255,255,255)
+    text("FCB",centerX-12,centerY+5)
     pop()
 }
+
+
 /**
  * Should draw a pretty but neutral background the tree
  */
@@ -108,7 +126,14 @@ function setup(){
     
     testLocator();
     testSize();
+    //drawDannebrog(xMid+100, yMid-100);
+    drawGodJul(xMid, yMid+50);    
+    //testLocator();
+    //testSize();
     // call you method here below
+    drawDannebrog(400,180)
+    Sophabbr(300,400)
+    testLocator()
 }
 
 /**
@@ -118,6 +143,9 @@ function testLocator(){
     jensFont(400, 500) // should a Dannebrog in the middle
     jensFont(50,50) // should draw Dannebrog in top left corner
     jensFont(750, 50) //should draw Dannebrog in top right corner
+    Sophabbr(400, 500) // should a Dannebrog in the middle
+    Sophabbr(50,50) // should draw Dannebrog in top left corner
+    Sophabbr(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
