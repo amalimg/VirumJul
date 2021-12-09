@@ -54,8 +54,43 @@ var drawDannebrog = function(centerX, centerY){
  * Should contain at least one loop and one if statement
  * It should be named according to your git name
  */
-function lukasWing(centerX, centerY){ 
+function jensFont(centerX, centerY){ 
+    push()
+        var scale = 1;
+        fill(0, 255, 4);
+        var x = centerX;
+        var y = centerY;
+        ellipse(x,y,60*scale,50*scale);
+        fill(255, 200, 0);
+        triangle(x-22,y+7,x-22,y-7,x-55,y);
+        line(x-22,y,x-55,y);
+        fill(0, 242, 255);
+        ellipse(x-10,y-10,10*scale,10*scale);
+        fill(0, 0, 0);
+        ellipse(x-10,y-10,4*scale,2*scale);
+        fill(138, 138, 138);
+        noStroke();
+        ellipse(x+30,y+55,100*scale,70*scale);
+        fill(255, 179, 0);
+        stroke(0, 0, 0);
+        strokeWeight(0.1);
+        rect(x+20,y+89,3*scale,40*scale);
+        rect(x+40,y+89,3*scale,40*scale);
+        noStroke();
+        triangle(x-10,y+140,x+10,y+127,x+30,y+127);
+        triangle(x+10,y+140,x+30,y+127,x+50,y+127);
+        stroke(0, 0, 0);
+        strokeWeight(0.1);
+        fill(255, 255, 255);
+        rect(x-30,y-26,60*scale,6*scale);
+        fill(255, 0, 0);
+        triangle(x-30,y-26,x+30,y-26,x+26,y-90);
+        fill(255, 255, 255);
+        ellipse(x+26,y-90,25*scale,25*scale);
 
+
+
+    pop()
 }
 /**
  * Should draw a pretty but neutral background the tree
@@ -68,11 +103,11 @@ function setup(){
     createCanvas(w,h);
     drawBackground();
     drawTree(xMid,yMid+50);
-    //drawDannebrog(xMid+100, yMid-100);
+    drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);
     
-    //testLocator();
-    //testSize();
+    testLocator();
+    testSize();
     // call you method here below
 }
 
@@ -80,9 +115,9 @@ function setup(){
  * Replace dannebrog with you function to test location
  */
 function testLocator(){
-    drawDannebrog(400, 500) // should a Dannebrog in the middle
-    drawDannebrog(50,50) // should draw Dannebrog in top left corner
-    drawDannebrog(750, 50) //should draw Dannebrog in top right corner
+    jensFont(400, 500) // should a Dannebrog in the middle
+    jensFont(50,50) // should draw Dannebrog in top left corner
+    jensFont(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
