@@ -87,6 +87,8 @@ function BaMedKag(centerX, centerY){
     pop()
 
 }
+
+
 /**
  * Should draw a pretty but neutral background the tree
  */
