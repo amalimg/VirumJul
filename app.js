@@ -54,8 +54,34 @@ var drawDannebrog = function(centerX, centerY){
  * Should contain at least one loop and one if statement
  * It should be named according to your git name
  */
-function lukasWing(centerX, centerY){ 
-
+function nieldiv(centerX, centerY){ 
+    push()
+        fill(252, 248, 5);
+        rect(centerX - 11, centerY - 60, 20, 30);
+        fill(247, 10, 26);
+        ellipse(centerX, centerY, 75, 75);// julekugle 
+        
+        var x = 0;
+        while (x < 10){
+        fill(173, 166, 166);
+        if (x < 4){
+        ellipse(centerX - 20, centerY - 20, 10, 10);
+        ellipse(centerX - 10, centerY - 20, 10, 10);
+        ellipse(centerX - 30, centerY - 8, 10, 10);
+        ellipse(centerX - 10, centerY - 13, 10, 10);
+        ellipse(centerX - 30, centerY - 14, 10, 10);
+        ellipse(centerX - 18, centerY - 2, 10, 10);
+        ellipse(centerX - 15, centerY - 17, 10, 10);
+        ellipse(centerX - 6, centerY - 10, 10, 10);
+        ellipse(centerX + 10, centerY + 10, 10, 10);
+        ellipse(centerX + 15, centerY + 14, 10, 10);
+        ellipse(centerX + 20, centerY + 19, 10, 10);
+        ellipse(centerX + 13, centerY + 14, 10, 10);
+        ellipse(centerX + 16, centerY, 10, 10);
+        }
+        x=x+1;
+        }
+    pop()
 }
 /**
  * Should draw a pretty but neutral background the tree
@@ -68,21 +94,22 @@ function setup(){
     createCanvas(w,h);
     drawBackground();
     drawTree(xMid,yMid+50);
-    //drawDannebrog(xMid+100, yMid-100);
+    drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);
     
-    //testLocator();
-    //testSize();
-    // call you method here below
+    testLocator();
+    testSize();
+    //call you method here below
+    nieldiv();
 }
 
 /**
  * Replace dannebrog with you function to test location
  */
 function testLocator(){
-    drawDannebrog(400, 500) // should a Dannebrog in the middle
-    drawDannebrog(50,50) // should draw Dannebrog in top left corner
-    drawDannebrog(750, 50) //should draw Dannebrog in top right corner
+    nieldiv(400, 500) // should a Dannebrog in the middle
+    nieldiv(50,50) // should draw Dannebrog in top left corner
+    nieldiv(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
