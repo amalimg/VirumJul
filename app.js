@@ -81,8 +81,25 @@ function nieldiv(centerX, centerY){
         }
         x=x+1;
         }
+function fredOpen(centerX, centerY){ 
+    push()
+        var r=random(0, 255);
+        var g=random(0, 255);
+        var b=random(0, 255);
+        fill(0, 255, 0);
+        ellipse(centerX+25, centerY-10, 30, 25);
+        ellipse(centerX+45, centerY-10, 30, 25);
+        fill(r, b, g);
+        rect(centerX, centerY, 70, 60);
+        rect(centerX-5, centerY, 80, 20);
+        fill(0, 255, 0);
+        rect(centerX+25, centerY, 20, 60);
+        
+
     pop()
 }
+
+
 /**
  * Should draw a pretty but neutral background the tree
  */
@@ -101,6 +118,14 @@ function setup(){
     testSize();
     //call you method here below
     nieldiv();
+    //testLocator();
+    //testSize();
+    // call you method here below
+    //fredOpen(300, 700);
+    testLocator();
+    testSize();
+    
+    
 }
 
 /**
@@ -110,6 +135,9 @@ function testLocator(){
     nieldiv(400, 500) // should a Dannebrog in the middle
     nieldiv(50,50) // should draw Dannebrog in top left corner
     nieldiv(750, 50) //should draw Dannebrog in top right corner
+    fredOpen(400, 500) // should a Dannebrog in the middle
+    fredOpen(50,50) // should draw Dannebrog in top left corner
+    fredOpen(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
@@ -117,7 +145,7 @@ function testLocator(){
  */
 function testSize(){
     rect(100, 300, 100, 100);
-    drawDannebrog(150, 350); //replace with you function
+    fredOpen(150, 350); //replace with you function
 }
 
     
