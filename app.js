@@ -78,6 +78,7 @@ function albeBody(centerX, centerY){
     ellipse(350,750,20,20);   
 
     pop()
+
 }
 
 
@@ -86,6 +87,12 @@ function albeBody(centerX, centerY){
  */
 function drawBackground(){
     background(200,200,200);
+
+    for(var i = 0; i <1500; i++){
+
+            drawConfetti(5,5,400,400);
+     }
+
 }
 
 function setup(){
