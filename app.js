@@ -54,7 +54,37 @@ var drawDannebrog = function(centerX, centerY){
  * Should contain at least one loop and one if statement
  * It should be named according to your git name
  */
-function lukasWing(centerX, centerY){ 
+
+
+ function drawConfetti(sizeX,sizeY) {
+
+    var r =random(5,400);
+    var g =random(5,400);
+    var b =random(5,400);
+    fill(r,g,b);
+    ellipse(random(0,800),random(0,1000),sizeX,sizeY)
+
+ }
+
+function BaMedKag(centerX, centerY){ 
+
+    push()
+        
+            fill("white");
+            ellipse(centerX,centerY-15,15,15)
+            ellipse(centerX,centerY,20,20)
+            ellipse(centerX,centerY+20,25,25)
+            fill("orange")
+            ellipse(centerX,centerY-13,5,5)
+            fill("black")
+            ellipse(centerX-3,centerY-17,5,5)
+            ellipse(centerX+3,centerY-17,5,5)
+            line(centerX+10,centerY,centerX+15,centerY-15)
+            line(centerX-10,centerY,centerX-15,centerY-15)
+            fill("black")
+            ellipse(centerX,centerY,5,5)
+            ellipse(centerX,centerY+20,5,5)
+    pop()
 
 }
 /**
@@ -62,6 +92,12 @@ function lukasWing(centerX, centerY){
  */
 function drawBackground(){
     background(200,200,200);
+
+    for(var i = 0; i <1500; i++){
+
+            drawConfetti(5,5,400,400);
+     }
+
 }
 
 function setup(){
@@ -71,18 +107,19 @@ function setup(){
     //drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);
     
-    //testLocator();
-    //testSize();
+    testLocator();
+    testSize();
     // call you method here below
+    BaMedKag(400,400);
 }
 
 /**
  * Replace dannebrog with you function to test location
  */
 function testLocator(){
-    drawDannebrog(400, 500) // should a Dannebrog in the middle
-    drawDannebrog(50,50) // should draw Dannebrog in top left corner
-    drawDannebrog(750, 50) //should draw Dannebrog in top right corner
+    BaMedKag(400, 500) // should a Dannebrog in the middle
+    BaMedKag(50,50) // should draw Dannebrog in top left corner
+    BaMedKag(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
@@ -90,7 +127,7 @@ function testLocator(){
  */
 function testSize(){
     rect(100, 300, 100, 100);
-    drawDannebrog(150, 350); //replace with you function
+    BaMedKag(150, 350); //replace with you function
 }
 
     
