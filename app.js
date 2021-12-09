@@ -54,9 +54,26 @@ var drawDannebrog = function(centerX, centerY){
  * Should contain at least one loop and one if statement
  * It should be named according to your git name
  */
-function lukasWing(centerX, centerY){ 
-
+function Sophabbr(centerX, centerY){ 
+    push()
+    var wid = 100
+    var hei = 100
+    fill(0, 98, 255);
+    ellipse(centerX,centerY,wid,hei);
+    fill(255, 255, 255);
+    ellipse(centerX,centerY,wid-(0.10*wid),hei-(0.10*hei));
+    fill(255, 0, 0);
+    ellipse(centerX,centerY,wid-(0.20*wid),hei-(0.20*wid));
+    fill(255, 255, 255);
+    ellipse(centerX,centerY,wid-(0.45*wid),hei-(0.45*hei));
+    fill(0, 98, 255);
+    ellipse(centerX,centerY,wid-(0.55*wid),hei-(0.55*wid));    
+    fill(255,255,255)
+    text("FCB",centerX-12,centerY+5)
+    pop()
 }
+
+
 /**
  * Should draw a pretty but neutral background the tree
  */
@@ -69,20 +86,22 @@ function setup(){
     drawBackground();
     drawTree(xMid,yMid+50);
     //drawDannebrog(xMid+100, yMid-100);
-    drawGodJul(xMid, yMid+50);
-    
+    drawGodJul(xMid, yMid+50);    
     //testLocator();
     //testSize();
     // call you method here below
+    drawDannebrog(400,180)
+    Sophabbr(300,400)
+    testLocator()
 }
 
 /**
  * Replace dannebrog with you function to test location
  */
 function testLocator(){
-    drawDannebrog(400, 500) // should a Dannebrog in the middle
-    drawDannebrog(50,50) // should draw Dannebrog in top left corner
-    drawDannebrog(750, 50) //should draw Dannebrog in top right corner
+    Sophabbr(400, 500) // should a Dannebrog in the middle
+    Sophabbr(50,50) // should draw Dannebrog in top left corner
+    Sophabbr(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
