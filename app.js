@@ -91,21 +91,22 @@ function jensFont(centerX, centerY){
 
 
 function Sophabbr(centerX, centerY){ 
+}
+function fredOpen(centerX, centerY){ 
     push()
-    var wid = 100
-    var hei = 100
-    fill(0, 98, 255);
-    ellipse(centerX,centerY,wid,hei);
-    fill(255, 255, 255);
-    ellipse(centerX,centerY,wid-(0.10*wid),hei-(0.10*hei));
-    fill(255, 0, 0);
-    ellipse(centerX,centerY,wid-(0.20*wid),hei-(0.20*wid));
-    fill(255, 255, 255);
-    ellipse(centerX,centerY,wid-(0.45*wid),hei-(0.45*hei));
-    fill(0, 98, 255);
-    ellipse(centerX,centerY,wid-(0.55*wid),hei-(0.55*wid));    
-    fill(255,255,255)
-    text("FCB",centerX-12,centerY+5)
+        var r=random(0, 255);
+        var g=random(0, 255);
+        var b=random(0, 255);
+        fill(0, 255, 0);
+        ellipse(centerX+25, centerY-10, 30, 25);
+        ellipse(centerX+45, centerY-10, 30, 25);
+        fill(r, b, g);
+        rect(centerX, centerY, 70, 60);
+        rect(centerX-5, centerY, 80, 20);
+        fill(0, 255, 0);
+        rect(centerX+25, centerY, 20, 60);
+        
+
     pop()
 }
 
@@ -124,16 +125,15 @@ function setup(){
     drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);
     
-    testLocator();
     testSize();
     //drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);    
     //testLocator();
-    //testSize();
-    // call you method here below
-    drawDannebrog(400,180)
-    Sophabbr(300,400)
-    testLocator()
+    //fredOpen(300, 700);
+    testLocator();
+    testSize();
+    
+    
 }
 
 /**
@@ -146,6 +146,9 @@ function testLocator(){
     Sophabbr(400, 500) // should a Dannebrog in the middle
     Sophabbr(50,50) // should draw Dannebrog in top left corner
     Sophabbr(750, 50) //should draw Dannebrog in top right corner
+    fredOpen(400, 500) // should a Dannebrog in the middle
+    fredOpen(50,50) // should draw Dannebrog in top left corner
+    fredOpen(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
@@ -153,7 +156,7 @@ function testLocator(){
  */
 function testSize(){
     rect(100, 300, 100, 100);
-    drawDannebrog(150, 350); //replace with you function
+    fredOpen(150, 350); //replace with you function
 }
 
     
