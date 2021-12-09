@@ -55,6 +55,7 @@ var drawDannebrog = function(centerX, centerY){
  * It should be named according to your git name
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 function jensFont(centerX, centerY){ 
     push()
         var scale = 1;
@@ -112,27 +113,32 @@ function fredOpen(centerX, centerY){
 =======
 function carlfont(centerX, centerY){ 
     push();
+=======
+function albeBody(centerX, centerY){ 
+    push()
+    fill(255,0,0);
+    ellipse(350,400,80,80);
+>>>>>>> 12d1c764939ffbebefcfc2e1e78d5c6be5a4961c
     
-fill((Date.now()/5 % 114), 15, 252);
-rect(centerX+10,centerY,80,80);
-pop();
+    fill(246,225,10);
+    ellipse(330,390,30,30);
+    ellipse(350,400,20,20);
 
-push();
-fill((Date.now()/5 % 255), 10, 10);
+    fill(1,86,225);
+    ellipse(450,600,80,80);
 
-rect(centerX,centerY,100,10);
+    fill(246,225,10);
+    ellipse(430,590,30,30);
+    ellipse(450,600,20,20);
 
+    fill(225, 1,205);
+    ellipse(350,750,80,80);
 
+    fill(246,225,10);
+    ellipse(330,740,30,30);
+    ellipse(350,750,20,20);   
 
-var x = 0;
-while(x < 10){
- if (x<3){
- rect(centerX+45,centerY+10,10,70);
- }
- x=x+1;
-}
-
-
+    pop()
 
     pop();
 >>>>>>> 10214d34948d6b02be4701d8c14b43a0616975ea
@@ -160,6 +166,7 @@ function setup(){
     drawGodJul(xMid, yMid+50);
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     testSize();
     //drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);    
@@ -167,16 +174,23 @@ function setup(){
     //fredOpen(300, 700);
 =======
 >>>>>>> 10214d34948d6b02be4701d8c14b43a0616975ea
+=======
+    
+    //testLocator();
+    //testSize();
+    // call you method here below
+>>>>>>> 12d1c764939ffbebefcfc2e1e78d5c6be5a4961c
     testLocator();
     testSize();
-    // call you method here below
-    BaMedKag(400,400);
+    albeBody();
+    
 }
 
 /**
  * Replace dannebrog with you function to test location
  */
 function testLocator(){
+<<<<<<< HEAD
 <<<<<<< HEAD
     jensFont(400, 500) // should a Dannebrog in the middle
     jensFont(50,50) // should draw Dannebrog in top left corner
@@ -192,6 +206,11 @@ function testLocator(){
     carlfont(50,50) // should draw Dannebrog in top left corner
     carlfont(750, 50) //should draw Dannebrog in top right corner
 >>>>>>> 10214d34948d6b02be4701d8c14b43a0616975ea
+=======
+    albeBody(400, 500) // should a Dannebrog in the middle
+    albeBody(50,50) // should draw Dannebrog in top left corner
+    albeBody(750, 50) //should draw Dannebrog in top right corner
+>>>>>>> 12d1c764939ffbebefcfc2e1e78d5c6be5a4961c
 }
 
 /**
@@ -199,7 +218,7 @@ function testLocator(){
  */
 function testSize(){
     rect(100, 300, 100, 100);
-    BaMedKag(150, 350); //replace with you function
+    albeBody(150, 350); //replace with you function
 }
 
     
