@@ -54,8 +54,30 @@ var drawDannebrog = function(centerX, centerY){
  * Should contain at least one loop and one if statement
  * It should be named according to your git name
  */
-function lukasWing(centerX, centerY){ 
+function albeBody(centerX, centerY){ 
+    push()
+    fill(255,0,0);
+    ellipse(350,400,80,80);
+    
+    fill(246,225,10);
+    ellipse(330,390,30,30);
+    ellipse(350,400,20,20);
 
+    fill(1,86,225);
+    ellipse(450,600,80,80);
+
+    fill(246,225,10);
+    ellipse(430,590,30,30);
+    ellipse(450,600,20,20);
+
+    fill(225, 1,205);
+    ellipse(350,750,80,80);
+
+    fill(246,225,10);
+    ellipse(330,740,30,30);
+    ellipse(350,750,20,20);   
+
+    pop()
 }
 /**
  * Should draw a pretty but neutral background the tree
@@ -68,21 +90,26 @@ function setup(){
     createCanvas(w,h);
     drawBackground();
     drawTree(xMid,yMid+50);
-    //drawDannebrog(xMid+100, yMid-100);
+    drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);
+    
     
     //testLocator();
     //testSize();
     // call you method here below
+    testLocator();
+    testSize();
+    albeBody();
+    
 }
 
 /**
  * Replace dannebrog with you function to test location
  */
 function testLocator(){
-    drawDannebrog(400, 500) // should a Dannebrog in the middle
-    drawDannebrog(50,50) // should draw Dannebrog in top left corner
-    drawDannebrog(750, 50) //should draw Dannebrog in top right corner
+    albeBody(400, 500) // should a Dannebrog in the middle
+    albeBody(50,50) // should draw Dannebrog in top left corner
+    albeBody(750, 50) //should draw Dannebrog in top right corner
 }
 
 /**
@@ -90,7 +117,7 @@ function testLocator(){
  */
 function testSize(){
     rect(100, 300, 100, 100);
-    drawDannebrog(150, 350); //replace with you function
+    albeBody(150, 350); //replace with you function
 }
 
     
