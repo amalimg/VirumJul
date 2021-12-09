@@ -80,11 +80,19 @@ while(x < 10){
 
     pop();
 }
+
+
 /**
  * Should draw a pretty but neutral background the tree
  */
 function drawBackground(){
     background(200,200,200);
+
+    for(var i = 0; i <1500; i++){
+
+            drawConfetti(5,5,400,400);
+     }
+
 }
 
 function setup(){
@@ -97,6 +105,7 @@ function setup(){
     testLocator();
     testSize();
     // call you method here below
+    BaMedKag(400,400);
 }
 
 /**
@@ -113,7 +122,7 @@ function testLocator(){
  */
 function testSize(){
     rect(100, 300, 100, 100);
-    drawDannebrog(150, 350); //replace with you function
+    BaMedKag(150, 350); //replace with you function
 }
 
     
