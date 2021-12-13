@@ -4,7 +4,7 @@ var h = 1000;
 xMid = w/2;
 yMid = h/2;
 // add you function to the array
-var allFunctions = [drawDannebrog, nieldiv];
+var allFunctions = [drawDannebrog, nieldiv, amalimg];
 
 var drawTree = function(centerX, centerY){
     push();
@@ -174,6 +174,48 @@ function albeBody(centerX, centerY){
     pop();
 }
 
+function amalimg(centerX, centerY){ 
+    push();
+
+    //ball
+    stroke(8, 90, 242);
+    fill(51,115,241);
+    ellipse(centerX, centerY, 50, 50);
+
+    //ground
+    stroke(8, 90, 242);
+    fill(240, 231, 231);
+    arc(centerX, centerY + 7, 50, 40, 0, 160);
+
+    //tree
+    stroke(5, 66, 26);
+    fill(16, 74, 12);
+    triangle(centerX - 5, centerY + 5, centerX + 5, centerY + 5, centerX, centerY - 10);
+
+    //root
+    stroke(101, 62, 22);
+    fill(101, 62, 22);
+    rect(centerX - 2, centerY + 5, 4, 6);
+
+    //snow
+    stroke(245, 240, 245);
+    fill(250, 245, 245);
+    ellipse(centerX - 10, centerY - 10, 3, 3);
+    ellipse(centerX + 10, centerY - 10, 3, 3);
+    ellipse(centerX + 13, centerY , 3, 3);
+    ellipse(centerX - 13, centerY , 3, 3);
+
+    var r=random(0, 255);
+    var g=random(0, 255);
+    //top
+    stroke(r, g, 50);
+    fill(r, g, 50);
+    ellipse(centerX, centerY - 12, 3, 3);
+
+    
+    pop();
+}
+
 
 /**
  * Should draw a pretty but neutral background the tree
@@ -202,7 +244,7 @@ function setup(){
     // call you method here below
     drawDannebrog(xMid+100, yMid-100);
 
-
+    amalimg(450, 300);
     
 }
 
@@ -211,9 +253,9 @@ function setup(){
  */
 function testLocator(){
 
-    nieldiv(400, 500) // should a Dannebrog in the middle
-    nieldiv(50,50) // should draw Dannebrog in top left corner
-    nieldiv(750, 50) //should draw Dannebrog in top right corner
+    (400, 500); // should a Dannebrog in the middle
+    (50, 50); // should draw Dannebrog in top left corner
+    (750, 50); //should draw Dannebrog in top right corner
 
 }
 
@@ -222,7 +264,7 @@ function testLocator(){
  */
 function testSize(){
     rect(100, 300, 100, 100);
-    albeBody(150, 350); //replace with you function
+    (150, 350); //replace with you function
 }
 
 
