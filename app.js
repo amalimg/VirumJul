@@ -54,8 +54,12 @@ var drawDannebrog = function(centerX, centerY){
  * Should contain at least one loop and one if statement
  * It should be named according to your git name
  */
-function lukasWing(centerX, centerY){ 
+function caroCommit(centerX, centerY){
+    push()
+    
+    
 
+    pop()
 }
 /**
  * Should draw a pretty but neutral background the tree
@@ -68,12 +72,14 @@ function setup(){
     createCanvas(w,h);
     drawBackground();
     drawTree(xMid,yMid+50);
-    //drawDannebrog(xMid+100, yMid-100);
+    drawDannebrog(xMid+100, yMid-100);
     drawGodJul(xMid, yMid+50);
     
     //testLocator();
     //testSize();
     // call you method here below
+    caroCommit();
+    testSize();
 }
 
 /**
